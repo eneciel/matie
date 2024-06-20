@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link href="font/Gotham-Black.woff" rel="font">
+        <link href="font/GothamBook.woff" rel="font">
+        <link href="font/GothamMedium.woff" rel="font">
+    </head>
+    <body>
+        <header id="halfFix">
+            <a href="index.html"><div class="logo"><img src="img/logo.png"></div></a>
+        </header>
+        <div id="banner">
+            <div id="bannerbgbox">
+                <img class="bannerbg" src="img/bannerbg.jpg">
+                <img class="bannerbg" src="img/bannerbgcover.png">
+            </div>
+            <div id="titlebox">
+                <h1>One challenge,</h1>
+                <h1>One change</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="s_title"><h2>Only three steps.</h2></div>
+            <div class="space" style="height: 12vh;"></div>
+            <div class="s_container" id="about">
+                <div class="s_contentbox_v">
+                    <div class="circle"><img src="img/s1_01.png"></div>
+                    <h3>Do challenges</h3>
+                    <p>Finish your daily challenges</p>
+                    <p>in the Matie app</p>
+                </div>
+                <img src="img/right_double_arrow.png" class="icon_big">
+                <div class="s_contentbox_v">
+                    <div class="circle"><img src="img/s1_02.png"></div>
+                    <h3>Earn points</h3>
+                    <p>Each challenges will</p>
+                    <p>give you points</p>
+                </div>
+                <img src="img/right_double_arrow.png" class="icon_big">
+                <div class="s_contentbox_v">
+                    <div class="circle"><img src="img/s1_03.png"></div>
+                    <h3>Buy products</h3>
+                    <p>Get products from</p>
+                    <p>ESG-friendly company</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="s_title"><h2>Join the challenge with Maties.</h2></div>
+            <div class="space" style="height: 12vh;"></div>
+            <div class="s_container">
+                <div class="characterbox">
+                    <div class="character-head">
+                        <img src="img/SingleUse.png">
+                        <h3>Cuppie</h3>
+                        <p>Reduce the single-use products!</p>
+                    </div>
+                    <div class="character-context">
+                        <p>
+                            Cuppie was born from an abandoned single-use cup for coffee takeaway. 
+                            Dispite the size, this brave warrior always figures out the best solution for the environment. 
+                            The red plastic straw has been our little Solomon's best friend ever since they were born.
+                        </p>
+                    </div>
+                </div>
+                <div class="characterbox">
+                    <div class="character-head">
+                        <img src="img/AirPollution.png">
+                        <h3>Tyar</h3>
+                        <p>The impact spreads so quickly!</p>
+                    </div>
+                    <div class="character-context">
+                        <p>
+                            Tyar was a veteran but somehow has retired from the job and no one knows why.
+                            It might seem like this rubber guy is always dense but it’s just you haven’t got any chance yet.
+                            Don’t underestimate the power an old tiger has! A tiger is still a tiger after decades. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script>
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('#halfFix').outerHeight();
+
+            $(window).scroll(function(event){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                if (st > lastScrollTop && st > navbarHeight) {
+                    $('#halfFix').addClass('nav-up');
+                } else {
+                    $('#halfFix').removeClass('nav-up'); 
+                }
+                lastScrollTop = st;
+            }
+        </script>
+    </body>
+</html>

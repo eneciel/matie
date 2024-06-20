@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url(font/Gotham-Black.woff);
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url(font/GothamMedium.woff);
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url(font/GothamBook.woff);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    width: 70vw;
+    height: 4vh;
+    padding: 2vh 15vw;
+    position: fixed;
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Gotham-Black';
+    font-size: 6em;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Gotham-Black';
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Gotham-Black';
+    font-size: 2em;
+    padding: 2vh 0;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Gotham-Black';
+    font-size: 1.2em;
+    padding: 2vh 0;
+    margin: 0;
+}
+
+p {
+    font-family: 'Gotham-Medium';
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    font-family: 'Gotham-Book';
+    font-size: 0.8em;
+    color: #757575;
+    padding: 0;
+    margin: 0;
+}
+
+.space {
+    width: 100%;
+    background-color: aqua;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+    user-select: none;
+}
+
+.logo > img {
+    height: 100%;
+}
+
+#banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bannerbgbox {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.bannerbg {
+    width: 100%;
+}
+
+.bannerbg {
+    position: absolute;
+    user-select: none;
+}
+
+#titlebox {
+    height: 16vh;
+    padding: 36vh 15vw;
+    position: absolute;
+}
+
+.section {
+    width: 70vw;
+    height: fit-content;
+    padding: 10vh 15vw;
+}
+
+.s_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.s_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.s_contentbox_v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s_contentbox_w {
+    margin: 1vh;
+    display: flex;
+    align-items: center;
+}
+
+#about {
+    justify-content: space-between;
+}
+
+.circle {
+    width: 16vw;
+    height: 16vw;
+    background-color: white;
+    border-radius: 999px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.circle img {
+    width: 100%;
+    border-radius: 999px;
+}
+
+.radius_eight {
+    border-radius: 1em;
+}
+
+.characterimg {
+    width: 16vw;
+    height: 36vh;
+    display: flex;
+}
+
+.charactercontent {
+    width: 13vw;
+    height: 8vh;
+    padding: 14vh 2vh;
+}
+
+.icon_big {
+    width: 3em;
+    height: 3em;
+}
