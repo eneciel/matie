@@ -1,19 +1,12 @@
 @font-face {
-    font-family: 'Gotham-Black';
-    src: url(font/Gotham-Black.woff);
-}
-
-@font-face {
-    font-family: 'Gotham-Medium';
-    src: url(font/GothamMedium.woff);
-}
-
-@font-face {
-    font-family: 'Gotham-Book';
-    src: url(font/GothamBook.woff);
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
 }
 
 html, body {
+    font-family: 'Freesentation-9Black';
     padding: 0;
     margin: 0;
 }
@@ -26,47 +19,54 @@ header {
     width: 70vw;
     height: 4vh;
     padding: 2vh 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     z-index: 10;
 }
 
+select {
+    color: rgb(34, 145, 248);
+    font-weight: 700;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
 h1 {
-    font-family: 'Gotham-Black';
     font-size: 6em;
     padding: 0;
     margin: 0;
 }
 
 h2 {
-    font-family: 'Gotham-Black';
     font-size: 3em;
     padding: 0;
     margin: 0;
 }
 
 h3 {
-    font-family: 'Gotham-Black';
     font-size: 2em;
     padding: 2vh 0;
     margin: 0;
 }
 
 h4 {
-    font-family: 'Gotham-Black';
     font-size: 1.2em;
     padding: 2vh 0;
     margin: 0;
 }
 
 p {
-    font-family: 'Gotham-Medium';
     font-size: 1em;
     padding: 0;
     margin: 0;
 }
 
 span {
-    font-family: 'Gotham-Book';
     font-size: 0.8em;
     color: #757575;
     padding: 0;
@@ -75,7 +75,6 @@ span {
 
 .space {
     width: 100%;
-    background-color: aqua;
 }
 
 .logo {
@@ -169,19 +168,55 @@ span {
     border-radius: 1em;
 }
 
-.characterimg {
-    width: 16vw;
-    height: 36vh;
+.characterbox {
     display: flex;
+    overflow: hidden;
 }
 
-.charactercontent {
-    width: 13vw;
-    height: 8vh;
-    padding: 14vh 2vh;
+.character-head {
+    width: 240px;
+    height: 300px;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin: 1em;
+    transition: 125ms;
+}
+
+.characterbox:hover .character-head {
+    width: 160px;
+    background-color: rgba(34, 145, 248, 0.2);
+}
+
+.characterbox:hover .character-context {
+    display: block;
+}
+
+.character-context {
+    width: 360px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: none;
+    padding: 2em 1em;
+}
+
+.characterbox img {
+    width: 100%;
 }
 
 .icon_big {
     width: 3em;
     height: 3em;
+}
+
+.imgcontainer {
+    width: 100%;
+}
+
+.imgcontainer img {
+    width: 100%;
 }
